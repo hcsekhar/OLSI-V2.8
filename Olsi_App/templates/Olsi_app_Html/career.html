@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  OLSI | Career
+{% endblock %}
+{% block content %}
+
+
+
+<style>
+          
+      body {
+        background-color: #ccc;
+      }
+      
+      .apply_box {
+        max-width: 600px;
+        padding: 20px;
+        background-color: white;
+        margin: 0 auto;
+        margin-top: 50px;
+        box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);
+        border-radius: 10px;
+      }
+      
+      .title_small {
+        font-size: 20px;
+      }
+      
+      .form_container {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+      }
+
+      .form_control {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      label {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      
+      input,
+      select,
+      textarea {
+        padding: 6px 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 15px;
+      }
+      
+      input:focus {
+        outline-color: red;
+      }
+      
+      .button_container {
+        display: flex;      
+        justify-content: flex-end;
+        margin-top: 20px;
+      }
+      
+      button {
+        background-color: red;
+        border: transparent solid 2px;
+        padding: 5px 10px;
+        color: white;
+        border-radius: 8px;
+        transition: 0.3s ease-in;
+      }
+
+      button:hover {
+        background-color: #ccc;
+        border: 2px solid red;
+        color: black;
+        transition: 0.3s ease-out;
+        cursor: pointer;
+      }
+
+      .textarea_control {
+        grid-column: 1 / span 2;
+      }
+
+      .textarea_control textarea {
+        width: 100%;
+      }
+      
+      @media (max-width: 480px) {
+        .textarea_control {
+          grid-column: 1 / span 1;
+        }
+      } 
+      
+</style>
+<div class="container">
+    <div class="apply_box">
+      <h1>Job Application</h1>
+      <form action="applyJob" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form_container">
+          <div class="form_control">
+            <label for="first_name">First Name</label>
+            <input id="first_name" name="first_name" placeholder="Enter First Name..." />
+          </div>
+          <div class="form_control">
+            <label for="last_name">Last Name</label>
+            <input id="last_name" name="last_name" placeholder="Enter Last Name..." />
+          </div>
+          <div class="form_control">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter Email..." />
+          </div>
+          <div class="form_control">
+            <label for="job_role">Job Role</label>
+            <select id="job_role" name="job_role">
+              <option value="">Select Job Role</option>
+              <option value="frontend">Frontend Developer</option>
+              <option value="backend">Backend Developer</option>
+              <option value="full_stack">Full Stack Developer</option>
+              <option value="ui_ux">UI UX Designer</option>
+            </select>
+          </div>
+
+          <div class="form_control">
+            <label for="number">Phone Number</label>
+            <input type="number" id="number" name="number" placeholder="Enter Number..." />
+          </div>
+          <div class="form_control">
+            <label for="qualification">Qualification</label>
+            <select id="qualification" name="qualification">
+              <option value="">Select Qualification</option>
+              <option value="mba">MBA</option>
+              <option value="mca">MCA</option>
+              <option value="degree">Degree</option>
+              <option value="b.tech">B.Tech</option>
+              <option value="etc">etc...</option>
+            </select>
+          </div>
+         
+          <div class="form_control">
+            <label for="city">City</label>
+            <input id="city" name="city" placeholder="Enter City Name..." />
+          </div>
+          <div class="form_control">
+            <label for="pincode">Pincode</label>
+            <input type="number" id="pincode" name="pincode" placeholder="Enter Pincode Name..." />
+          </div>
+          <div class="form_control">
+            <label for="date">Date</label>
+            <input value="2024-01-01" type="date" id="date" name="date" />
+          </div>
+          <div class="form_control">
+            <label for="upload">Upload Your CV</label>
+            <input type="file" id="upload" name="upload_file" />
+          </div>
+        </div>
+        <div class="button_container">
+          <button type="submit" id="applyButton">Apply Now</button>
+        </div>
+      </form>
+    </div>
+</div>
+
+  
+   
+    
+      
+    
+
+{% endblock %}

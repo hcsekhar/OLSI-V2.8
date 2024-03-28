@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  OLSI | Review
+{% endblock %}
+{% block content %}
+  <div class="container d-flex py-5">
+    <div class="" >
+      <img src="{% static 'img/man.png' %}" style="height: 180px; width: 200px; margin-top: 30%;" alt="img"/>
+    </div>
+    <div class="container py-5 me-3" style="margin-left: 10px;">
+      <h2>Product Review</h2>
+      <span style="font-size:150%;color:gold;">&starf;</span>
+      <span style="font-size:150%;color:gold;">&starf;</span>
+      <span style="font-size:150%;color:gold;">&starf;</span>
+      <span style="font-size:150%;color:gold;">&starf;</span>
+      <span style="font-size:150%;color:gold;">&starf;</span>
+
+      <div class="row">
+        <div class="row">
+          <h2 class="display-8" >Product Name : fertilizer product</h2>
+          <p style="padding-right: 140px;">
+            Quality: A good fertilizer is free-flowing, has consistent particle size, and dissolves quickly when it comes into contact with water or moist soil. It should also be free of contaminants and additives.
+
+            Organic: Organic fertilizers are made from living organisms, like composts and manures. They nourish plants in a more sustainable way than synthetic fertilizers. Organic fertilizers can also be safer for indoor plants around children and pets.
+            <br />
+            Environmental impact: Fertilizers can help maintain soil fertility, increase yields, and improve harvest quality. However, a significant portion of fertilizers are lost, which can increase agricultural costs, waste energy, and pollute the environment.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

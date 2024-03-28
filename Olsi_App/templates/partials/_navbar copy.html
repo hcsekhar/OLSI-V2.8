@@ -1,0 +1,129 @@
+{% load static %}
+ <!-- Topbar Start -->
+    <div class="container-fluid bg-dark text-light px-0 py-2">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    {% comment %} <span class="fa fa-phone-alt me-2"></span> {% endcomment %}
+                    <a href="{% url 'contact' %}" class="text-light">Downloads</a>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    {% comment %} <span class="far fa-people me-2"></span> {% endcomment %}
+                    <a href="{% url 'aboutus' %}" class="text-light">About OLSI</a>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center mx-n2">
+                    <span> </span>
+                    {% comment %} <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a> {% endcomment %}
+                    <a href="{% url 'contact' %}" class="text-light" style="margin-right: 10px;">Contact Us</a>
+                    <button type="button" class="btn btn-primary btnLogin-popup">Sign In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="{% static 'img/logo_olsi.png' %}" class="m-0" alt="" style="height: 140px; width: 190px;">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{% url "home" %}" class="nav-item nav-link active">Home</a>
+                {% comment %} <a href="{% url "aboutus" %}" class="nav-item nav-link">About Us</a> {% endcomment %}
+                <a href="{% url "products" %}" class="nav-item nav-link">Products</a>
+                <!-- <a href="project.html" class="nav-item nav-link">Career</a> -->
+
+                 <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Career</a>
+                    <div class="dropdown-menu bg-light m-0">
+                        <a href="{% url "business" %}" class="dropdown-item">Business Opportunty</a>
+                        
+                    </div>
+                </div> 
+                <a href="{% url "gallery" %}" class="nav-item nav-link">Gallery</a>
+                <a href="#" class="nav-item nav-link">Upcoming Products</a>
+                
+            </div>
+            {% comment %} <button class="btn btn-secondary py-4 px-lg-4 rounded-0 d-none d-lg-block btnLogin-popup">Log In<i class="fa fa-user ms-3"></i></button> {% endcomment %}
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+  <!-- Login and Registration  -->
+  
+  <div class="cover_box">
+    <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+    <div class="form-box login">
+        <h2>Login</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                <input type="email" required>
+                <label>Email</label>
+  
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                <input type="password" required>
+                <label>Password</label>
+  
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remmber me</label>
+                <a href="#">Forgot password?</a>
+  
+            </div>
+            <button type="submit" class="btn12">Login</button>
+            <div class="login-register">
+                <p>Don't have an account? <a href="#reg" class="register-link">Register</a></p>
+            </div>
+  
+  
+        </form>
+  
+  
+    </div>
+    <!-- registration -->
+    <div id="reg" class="form-box register">
+        <h2>Register</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                <input type="text" required>
+                <label>Username</label>
+  
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                <input type="email" required>
+                <label>Email</label>
+  
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                <input type="password" required>
+                <label>Password</label>
+  
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Agree to terms & conditions</label>
+                <a href="#">Forgot password?</a>
+  
+            </div>
+            <button type="submit" class="btn12">Register</button>
+            <div class="login-register">
+                <p>Already have an account? <a href="#" class="login-link">Sign In</a></p>
+            </div>
+        </form>
+    </div>
+  </div>
+  

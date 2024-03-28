@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  OLSI | Branches
+{% endblock %}
+{% block content %}
+<style>
+  .container {
+    width: 100%;
+    
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  @media (max-width: 480px) {
+    th, td {
+      padding: 4px;
+      font-size: 12px;
+    }
+  }
+</style>
+
+ 
+<div class="container mt-5" style="width: 100%">
+  <table class="table table-hover align-middle">
+    <thead>
+      <tr>
+        <th scope="col" class="text-primary">Sl.No</th>
+        <th scope="col" class="text-primary">State</th>
+        <th scope="col" class="text-primary">District</th>
+        <th scope="col" class="text-primary">Address</th>
+        <th scope="col" class="text-primary">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in item %}
+          <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td scope="row">{{ i.state }}</td>
+            <td scope="row">{{ i.District }}</td>
+            <td scope="row" class="text-wrap">{{ i.Address }}</td>
+            <td scope="row">{{ i.name }}</td>
+          </tr>
+        {% endfor %}
+      {% comment %} <tr>
+        <th scope="row">1</th>
+        <td scope="row">Andhra Pradesh</td>
+        <td scope="row">KADAPA</td>
+        <td scope="row" class="text-wrap">1/2123, Near vaisa ads, Prakash nagar, Raliway station road, Kadapa - 516001</td>
+        <td scope="row">M. VIJAY KUMAR</td>
+      </tr>
+        <tr>
+        <th scope="row">2</th>
+        <td>Andhra Pradesh</td>
+        <td>NANDYAL</td>
+        <td class="text-wrap">H.NO..29/338-1A,First floor, Near by park, Padmavathi Nagar, Nandyal - 518501</td>
+        <td>B.BRAHMAIAH</td>
+      </tr>
+       <tr>
+          <th scope="row">3</th>
+          <td scope="row">Andhra Pradesh</td>
+          <td scope="row">PRODDATUR</td>
+          <td scope="row" class="text-wrap">D.No.7/1420, Shop No. 31 (Second Floor) Adithya Ram Shopping Mall, Near to Vivekananda Cloth Market Korrapadu Road, Opp Reliance Super Market, Proddatur - 516360</td>
+          <td scope="row">ALLU MALLIKARJUNA</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td scope="row">Andhra Pradesh</td>
+          <td scope="row">ADONI</td>
+          <td scope="row" class="text-wrap">26/218.1 st floor, Karvanpeta, Opposite Devi nursing home, Near Thikkaseamy darga, Adoni - 518301</td>
+          <td scope="row">M. RAGHU KUMAR</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td scope="row">Andhra Pradesh</td>
+          <td scope="row">ATMAKUR</td>
+          <td scope="row" class="text-wrap">3-47/11, Union 3rd block, Neetaji nagar, Atmakur - 518422</td>
+          <td scope="row">RAMI REDDY</td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td scope="row">Andhra Pradesh</td>
+          <td scope="row">TADIPATRI</td>
+          <td scope="row" class="text-wrap">Door no. 18/68, Gannevaripalli colony, Kadapa main road, Inside Hero bike showroom, TADIPATRI - 515411</td>
+          <td scope="row">VISHNU VARDHAN REDDY</td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td scope="row">Andhra Pradesh</td>
+          <td scope="row">DHONE</td>
+          <td scope="row" class="text-wrap">D.NO 9-63, Appolo Pharmacy up, KVS Line, Kothapet Dhone, NANDYAL - 518222</td>
+          <td scope="row">CHAKALI NAGESH</td>
+        </tr>
+        <tr>
+          <th scope="row">8</th>
+          <td scope="row">Andhra Pradesh</td>
+          <td scope="row">KURNOOL</td>
+          <td scope="row" class="text-wrap">Shop no 35-Ground floor ,JCS complex. Near Spencers opp RTC Bus stand kurnool.</td>
+          <td scope="row">K. RAMESH</td>
+        </tr>
+        <tr>
+          <th scope="row">9</th>
+          <td scope="row">Telangana</td>
+          <td scope="row">GAJWEL</td>
+          <td scope="row" class="text-wrap">H-No :11-173/1/A, Near by ground, Near girls education hub, Sangapur road, GAJWEL - 502278</td>
+          <td scope="row">MADHUKAR</td>
+        </tr> {% endcomment %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

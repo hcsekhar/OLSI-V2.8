@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}
+  OLSI | Agriculture
+{% endblock %}
+{% load static %}
+{% block content %}
+  <div class="crops">
+    <img src="{% static 'img/agriculture.jpg' %}" class="w-100" style="height: 450px;"  />
+  </div>
+
+  <div class="wrapper" style="margin: 50px;">
+    <h1>Agriculture and OLSI Prospects</h1>
+    <br>
+    <p></p>
+    <div class="content-box container" style="border: 1px solid gray; border-width: thin; padding: 20px; border-radius: 20px;">
+      <div class="card12">
+        <h2 style="color: darkgreen; opacity: 1px; font-size: 25px;">Agricultural Landscape in Numbers</h2>
+        <p>India's agriculture employs around 50% of its workforce. It contributes about 15% to the country's GDP. The sector faces challenges like soil degradation, water scarcity, and climate variability.</p>
+      </div>
+      <div class="card12">
+        <h2 style="color: darkgreen; opacity: 1px; font-size: 25px;">Fertilizer Woes</h2>
+        <p>Over 60% of Indian soils suffer from nutrient deficiency. Traditional fertilizer practices often lead to imbalanced soil health. Excessive use of chemical fertilizers impacts environment and crop quality.</p>
+      </div>
+      <div class="card12">
+        <h2 style="color: darkgreen; opacity: 1px; font-size: 25px;">Pain Points Addressed by OLSI's Agriproducts</h2>
+        <p>OLSI's agriproducts offer sustainable alternatives to traditional fertilizers. They focus on enhancing soil health and nutrient content. Precision application minimizes excess fertilizer usage, reducing environmental impact</p>
+      </div>
+      <div class="card12">
+        <h2 style="color: darkgreen; opacity: 1px; font-size: 25px;">The OLSI Approach</h2>
+        <p>OLSI's agriproducts are research-backed, tailored to Indian soil conditions. They are designed to improve crop yield, quality, and overall sustainability. By promoting balanced soil health, OLSI aids in mitigating fertilizer-related issues.</p>
+      </div>
+      <div class="card12">
+        <h2 style="color: darkgreen; opacity: 1px; font-size: 25px;">Impact and Future</h2>
+        <p>By addressing fertilizer challenges, they align with the vision of a sustainable agricultural future. As Indian agriculture navigates complexities, OLSI's commitment to innovation and sustainable practices through its agriproducts paves the way for a more resilient and prosperous farming sector.</p>
+      </div>
+      <div class="card12" style="">
+        <h2 style="color: darkgreen; opacity: 1px; font-size: 25px;">OLSI Prospects</h2>
+        <p>Indian agriculture stands as the backbone of the nation's economy, employing a significant portion of the population and contributing to its sustenance. With diverse agro-climatic zones, India boasts a rich array of crops, from cereals and pulses to fruits and vegetables.</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

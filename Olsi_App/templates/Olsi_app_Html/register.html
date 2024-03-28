@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  OLSI | Registration
+{% endblock %}
+{% block content %}
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
+</head>
+  {% comment %} <div class="cover_box">
+    <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span> {% endcomment %}
+    <!-- registration -->
+    <div id="reg" class="form-box register" style="margin: 30px;">
+      <h2>Register</h2>
+      <form>
+        <div class="roww">
+          <div class="row1 container">
+            <h4 style="padding-top: 2%;">Enter New User / Member Details</h4>
+            <br />
+            <div class="row mb-4">
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="form6Example1" class="form-control" name="fname" required />
+                  <label class="form-label" for="form6Example1">Upline ID</label>
+                </div>
+              </div>
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="form6Example2" class="form-control" required />
+                  <label class="form-label" for="form6Example2">Upline name</label>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="form6Example1" class="form-control" required />
+                  <label class="form-label" for="form6Example1">First name*</label>
+                </div>
+              </div>
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="form6Example2" class="form-control" required />
+                  <label class="form-label" for="form6Example2">Last name*</label>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <span class="input-group-text">
+                    <img src="{% static 'img/india.jpg' %}" alt="India Flag" width="20" height="auto" />&nbsp;+91<input type="tel" id="form6Example1" class="form-control" maxlength="10" required />
+                    <label class="form-label" for="form6Example1" style="padding-left: 15%; font-size: 100%; padding-top:2.5%;">Mobile Number*</label>
+                  </span>
+                </div>
+              </div>
+              <div class="col">
+                <div data-mdb-input-init class="form-outline" style="display: flex; gap:0.7rem; padding-left: 13%">
+                  <h5>Gender*</h5>
+                  <input type="radio" id="form6Example2" class="" name="gender1" required />
+                  <label class="form-label" for="form6Example2" style="padding-top: 2px;">Male</label>
+                  <input type="radio" id="form6Example2" class="" required name="gender1" />
+                  <label class="form-label" for="form6Example2" style="padding-top: 2px;">Female</label>
+                  <input type="radio" id="form6Example2" class="" required name="gender1" />
+                  <label class="form-label" for="form6Example2" style="padding-top: 2px;">Others</label>
+                </div>
+              </div>
+              <div class="col">
+                <div data-mdb-input-init class="form-outline" style="position: absolute; width: 150px;">
+                  <input type="date" id="form6Example2" class="form-control" required />
+                  <label class="form-label" for="form6Example2" id="">Date Of Birth*</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br /><hr><br />
+        <div class="roww1">
+          <div class="row1 container">
+            <h4 style="padding-top: 2%;">Enter Spouse / Nominee Details</h4>
+            <br />
+            <div class="row mb-4">
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="form6Example1" class="form-control" required />
+                  <label class="form-label" for="form6Example1">First name*</label>
+                </div>
+              </div>
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="form6Example2" class="form-control" required />
+                  <label class="form-label" for="form6Example2">Last name*</label>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="form6Example1" class="form-control" required />
+                  <label class="form-label" for="form6Example1">Relation with Applicant*</label>
+                </div>
+              </div>
+              <div class="col">
+                <div data-mdb-input-init class="form-outline" style="display: flex; gap:0.7rem; margin-left: 18%;">
+                  <h5>Gender *</h5>
+                  <input type="radio" id="form6Example2" class="" name="gender" required />
+                  <label class="form-label" for="form6Example2" style="padding-top: 2px;">Male</label>
+                  <input type="radio" id="form6Example2" class="" required name="gender" />
+                  <label class="form-label" for="form6Example2" style="padding-top: 2px;">Female</label>
+                  <input type="radio" id="form6Example2" class="" required name="gender" />
+                  <label class="form-label" for="form6Example2" style="padding-top: 2px;">Others</label>
+                </div>
+              </div>
+              <div class="col">
+                <div data-mdb-input-init class="form-outline" style="position: absolute;width: 150px;">
+                  <input type="date" id="form6Example2" class="form-control" width="80px" required />
+                  <label class="form-label" for="form6Example2" id="">Date Of Birth*</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br /><hr><br />
+        <div class="roww2">
+          <div class="row1 container">
+            <h4 style="padding-top: 2%;">Enter Address Details</h4>
+            <br />
+            <div class="row mb-4">
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="form6Example1" class="form-control" required />
+                  <label class="form-label" for="form6Example1">Your Address*</label>
+                </div>
+              </div>
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="form6Example2" class="form-control" required />
+                  <label class="form-label" for="form6Example2">Pincode*</label>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="form6Example1" class="form-control" required />
+                  <label class="form-label" for="form6Example1">City*</label>
+                </div>
+              </div>
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="form6Example2" class="form-control" required />
+                  <label class="form-label" for="form6Example2">District*</label>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="form6Example1" class="form-control" required />
+                  <label class="form-label" for="form6Example1">State*</label>
+                </div>
+              </div>
+              <div class="col">
+                <div data-mdb-input-init class="form-outline">
+                  <input type="text" id="form6Example2" class="form-control" required />
+                  <label class="form-label" for="form6Example2">Country*</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="form-check d-flex justify-content-center mb-4" style="float: left; padding-left: 12%;">
+          <input class="form-check-input me-2" type="checkbox" value="" id="form6Example8" checked required />
+          <label class="form-check-label" for="form6Example8">I agree to the Terms and Conditions and Privacy Policy For OLSI</label>
+        </div>
+        <br>
+        <div class="rgbutton">
+          <input class="btn btn-primary" type="submit" value="Next" />
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

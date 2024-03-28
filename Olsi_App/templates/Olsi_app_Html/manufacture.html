@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  OLSI | Manufacturing
+{% endblock %}
+{% block content %}
+
+
+<style>
+  /* Media query for mobile view */
+  @media only screen and (max-width: 480px) {
+    .d-flex {
+      flex-direction: column;
+    }
+    .about-left,
+    .about-right {
+      margin: 20px;
+    }
+    .about-left img {
+      border-radius: 15px;
+      width: 100%;
+      height: auto;
+    }
+    .about-right {
+      margin-top: 20px;
+    }
+  }
+</style>
+
+
+  <section id="about-section" class="d-flex">
+    <div class="about-left" style="margin: 40px;">
+      <img src="{% static 'img/manufacture.jpeg' %}" style="border-radius: 30px;" height="550px" width="450px" />
+    </div>
+
+    <div class="about-right" style="margin-top: 40px;">
+      <h2 class="display-4">Crafting Excellence Through Manufacturing</h2><br />
+
+      <p>At OLSI, the process of bringing our products to fruition is a carefully orchestrated symphony of artistry and precision. We've established a network of certified craftsmen and experts, who, with their specialized skills, transform raw materials into exceptional creations.</p><br />
+      <p>Our products are born from a collaboration with seasoned artisans who hold the coveted GMC certification. This endorsement signifies their mastery in their respective fields and ensures that each item they produce adheres to the highest standards of quality and craftsmanship.</p><br />
+      <p>
+        The heart of our approach lies in the formulation of unique blends that set our products apart. Guided by our vision, we intricately blend ingredients in ways that not only deliver remarkable results but also cater to individual preferences and needs. This artful blending is a hallmark of OLSI's commitment to tailored excellence.<br /><br />
+        Throughout the creation process, we uphold rigorous standards by overseeing every stage personally. Our dedicated team ensures that each product undergoes meticulous quality checks, reflecting our dedication to delivering nothing short of excellence.
+      </p><br />
+      <p>In essence, OLSI's manufacturing is a harmonious fusion of expertise, innovation, and personal attention. It's a celebration of craftsmanship, where our products bear the mark of true distinction, enriching the lives of those who experience them.</p>
+    </div>
+  </section>
+
+
+{% endblock %}

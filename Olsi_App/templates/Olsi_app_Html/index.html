@@ -1,0 +1,524 @@
+{% extends 'base.html' %} {% load static %} {% block title %} OLSI | Home
+{%endblock %} {% block content %}
+<!-- Carousel Start -->
+
+<style>
+  .ps-51 {
+    padding-left: 4rem !important;
+  }
+
+  .ps-52 {
+    padding-left: 5rem !important;
+  }
+
+  .ps-53 {
+    padding-left: 5rem !important;
+  }
+
+
+  .m-3 {
+    margin: 1rem !important;
+  }
+  
+</style>
+  
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      {% comment %} <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button> {% endcomment %}
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">     
+          <img src="{% static 'img/carousel5.jpg' %}" class="img" height="55%" width="100%" alt="..." />        
+      </div>
+      <div class="carousel-item">        
+          <img src="{% static 'img/carousel7.jpg' %}" class="img" height="55%" width="100%" alt="..." />        
+      </div>
+      <div class="carousel-item">        
+          <img src="{% static 'img/carousel8.jpg' %}" class="img" height="55%" width="100%" alt="..." />        
+      </div>
+      {% comment %} <div class="carousel-item">        
+          <img src="{% static 'img/carousel9.jpg' %}" class="img" height="55%" width="100%" alt="..." />        
+      </div> {% endcomment %}
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev" style="bottom: 10%; left: -3%;">
+      <span class="carousel-control-prev-icon"></span>
+      {% comment %} <span class="visually-hidden">Previous</span> {% endcomment %}
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next" style="bottom: 10%; right: -3%;">
+      <span class="carousel-control-next-icon"></span>
+      {% comment %} <span class="visually-hidden">Next</span> {% endcomment %}
+    </button>
+    </div>
+
+
+<!-- Carousel End -->
+
+{% comment %}  {% endcomment %}
+
+<!-- In Circle Categories start -->
+
+<div class="container">
+  <div
+    class="text-center mx-auto wow fadeInUp"
+    data-wow-delay="0.1s"
+    style="max-width: 500px"
+  >
+    <h1 class="display-5 mb-5 mt-5">Explore Our Product Range</h1>
+  </div>
+  <div class="row container justify-content-center">
+    <div class="prdt-view wow fadeInUp d-flex justify-content-center">
+      <div class="prdt-crd me-5">
+        <a href="{% url 'products' 1 %}" class="w3-bar-item w3-button">
+          <img src="{% static 'img/wood-landscape.jpg' %}" class="prdt-circle-bg rounded-circle" alt=""/>
+          <img src="{% static 'img/Product_Img/Ojas.png' %}" class="prdt-img" alt="" style="padding-left:10%;" />
+          <h6 class="display-8 m-3 ps-52">Health Care</h6>
+        </a>
+      </div>
+      
+
+      <div class="prdt-crd me-5" >
+        <a href="{% url 'products' 3 %}" class="w3-bar-item w3-button">
+          <img src="{% static 'img/wood-landscape.jpg' %}" class="prdt-circle-bg rounded-circle" alt=""/>
+          <img src="{% static 'img/Product_Img/shampoo.png' %}" class="prdt-img" alt="" />
+          <h6 class="display-8 m-3 ps-51">Personal Care</h6>
+        </a>
+      </div>
+      <div class="prdt-crd me-5" >
+        <a href="{% url 'products' 4 %}" class="w3-bar-item w3-button">
+          <img src="{% static 'img/wood-landscape.jpg' %}" class="prdt-circle-bg rounded-circle" alt=""/>
+          <img src="{% static 'img/Product_Img/DETERGENT.png' %}" class="prdt-img" alt=""/>
+          <h6 class="display-8 m-3 ps-52">Home Care</h6>
+        </a>
+      </div>
+      <div class="prdt-crd me-5">
+        <a href="{% url 'products' 2 %}" class="w3-bar-item w3-button">
+          <img src="{% static 'img/wood-landscape.jpg' %}" class="prdt-circle-bg rounded-circle" alt=""/>
+          <img src="{% static 'img/Product_Img/500.png' %}" class="prdt-img" alt="" />
+          <h6 class="display-8 m-3 ps-53">Agriculture</h6>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- In Circle Categories End -->
+
+
+<!-- Offer Testimonial start -->
+
+<div class="container d-flex">
+  <div class="card wow fadeInUp w-50 h-20 me-5 border-0" data-wow-delay="0.5s">
+    <div class="owl-carousel testimonial-carousel">
+      <div class="testimonial-item">
+        <img class="img-rounded" style="width: 100%; height: 25%" src="{% static 'img/offer.jpg' %}" alt="" />
+      </div>
+      <div class="testimonial-item">
+        <img class="img-rounded" style="width: 100%; height: 25%" src="{% static 'img/offer1.jpg' %}" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="card wow fadeInUp w-50 border-0" height="200px" data-wow-delay="0.5s">
+    <div class="owl-carousel testimonial-carousel">
+      <div class="testimonial-item">
+        <img class="img-rounded" style="width: 100%; height: 25%" src="{% static 'img/offer2.jpg' %}" alt="" />
+      </div>
+      <div class="testimonial-item">
+        <img class="img-rounded" style="width: 100%; height: 25%" src="{% static 'img/offer3.jpg' %}" alt="" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Offer Testimonial end -->
+
+<!-- In Circle Categories start -->
+
+
+<!-- Certificates End -->
+
+<!-- Products Card Starts -->
+
+<br><br>
+
+<div
+  class="text-center mx-auto wow fadeInUp"
+  data-wow-delay="0.1s"
+  style="max-width: 500px"
+>
+  <h1 class="display-5 mb-5">OLSI Products</h1>
+</div>
+<div class="container mt-5" id="health-care">
+  <h3 class="display-5 mb-5 text-primary">Health Care</h3>
+  <br />
+  <div class="row g-4 portfolio-container">
+    {% for i in data %} {% if i.category.ctg_Name == 'Health Care' %}
+    <div
+      class="wrapper1 col-lg-4 col-md-6 d-flex portfolio-item wow fadeInUp"
+      data-wow-delay="0.1s"
+    >
+      <div class="product-img">
+        <img src="{{ i.PRDT_Image.url }}" />
+      </div>
+      <div class="product-info">
+        <div class="product-text mt-5">
+          <p class="display-9 text-primary">{{ i.PRDT_Title }}</p>
+          <p class="">MRP:₹ {{ i.PRDT_price }}</p>
+          <p class="text-muted" style="font-size: 15px">(Incl. all taxes)</p>
+          <p class="text-muted" style="font-size: 13px">
+            Net Qty : {{ i.PRDT_Size }}
+          </p>
+        </div>
+        <div class="product-price-btn">
+          <!-- <p><span>78</span>$</p> -->
+          <a href="{% url 'viewproduct' i.id %}"
+            ><button type="button" class="btn btn-primary prdt-btn">
+              Read More
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+    {% endif %} {% endfor %}
+  </div>
+</div>
+
+<!--    -->
+
+<div class="container mt-5" id="person-care">
+  <h3 class="display-5 mb-5 text-primary">Personal Care</h3>
+  <br />
+  <div class="row g-4 portfolio-container">
+    {% for i in data %} {% if i.category.ctg_Name == 'Personal Care' %}
+    <div
+      class="wrapper1 col-lg-4 col-md-6 d-flex portfolio-item wow fadeInUp"
+      data-wow-delay="0.1s"
+    >
+      <div class="product-img">
+        <img src="{{ i.PRDT_Image.url }}" />
+      </div>
+      <div class="product-info">
+        <div class="product-text mt-5">
+          <p class="display-9 text-primary">{{ i.PRDT_Title }}</p>
+          <p class="">MRP:₹{{ i.PRDT_price }}</p>
+          <p class="text-muted" style="font-size: 15px">(Incl. all taxes)</p>
+          <p class="text-muted" style="font-size: 13px">
+            Net Qty : {{ i.PRDT_Size }}
+          </p>
+        </div>
+        <div class="product-price-btn">
+          <!-- <p><span>78</span>$</p> -->
+          <a href="{% url 'viewproduct' i.id %}"
+            ><button type="button" class="btn btn-primary prdt-btn">
+              Read More
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+    {% endif %} {% endfor %}
+  </div>
+</div>
+
+<!--     -->
+
+<div class="container mt-5" id="home-care">
+  <h3 class="display-5 mb-5 text-primary">Home Care</h3>
+  <br />
+  <div class="row g-4 portfolio-container">
+    {% for i in data %} {% if i.category.ctg_Name == 'Home Care' %}
+    <div
+      class="wrapper1 col-lg-4 col-md-6 d-flex portfolio-item wow fadeInUp"
+      data-wow-delay="0.1s"
+    >
+      <div class="product-img">
+        <img src="{{ i.PRDT_Image.url }}" />
+      </div>
+      <div class="product-info">
+        <div class="product-text mt-5">
+          <p class="display-9 text-primary">{{ i.PRDT_Title }}</p>
+          <p class="">MRP:₹{{ i.PRDT_price }}</p>
+          <p class="text-muted" style="font-size: 15px">(Incl. all taxes)</p>
+          <p class="text-muted" style="font-size: 13px">
+            Net Qty : {{ i.PRDT_Size }}
+          </p>
+        </div>
+        <div class="product-price-btn">
+          <!-- <p><span>78</span>$</p> -->
+          <a href="{% url 'viewproduct' i.id %}"
+            ><button type="button" class="btn btn-primary prdt-btn">
+              Read More
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+    {% endif %} {% endfor %}
+  </div>
+</div>
+
+<!--     -->
+
+<div class="container mt-5" id="agriculture">
+  <h3 class="display-5 mb-5 text-primary">Agriculture</h3>
+  <br />
+  <div class="row g-4 portfolio-container">
+    {% for i in data %} {% if i.category.ctg_Name == 'Agriculture' %}
+    <div
+      class="wrapper1 col-lg-4 col-md-6 d-flex portfolio-item wow fadeInUp"
+      data-wow-delay="0.1s"
+    >
+      <div class="product-img">
+        <img src="{{ i.PRDT_Image.url }}" />
+      </div>
+      <div class="product-info">
+        <div class="product-text mt-5">
+          <p class="display-9 text-primary">{{ i.PRDT_Title }}</p>
+          <p class="">MRP:₹{{ i.PRDT_price }}</p>
+          <p class="text-muted" style="font-size: 15px">(Incl. all taxes)</p>
+          <p class="text-muted" style="font-size: 13px">
+            Net Qty : {{ i.PRDT_Size }}
+          </p>
+        </div>
+        <div class="product-price-btn">
+          <!-- <p><span>78</span>$</p> -->
+          <a href="{% url 'viewproduct' i.id %}"
+            ><button type="button" class="btn btn-primary prdt-btn">
+              Read More
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+    {% endif %} {% endfor %}
+  </div>
+</div>
+
+<!--     -->
+
+{% comment %} <div class="container mt-5" id="person-care">
+  <h3 class="display-5 mb-5 text-primary">Personal Care</h3>
+  <br />
+  <div class="row g-4 portfolio-container">
+    {% for i in data %} {% if i.category.ctg_Name == 'Personal Care' %}
+    <div
+      class="wrapper1 col-lg-4 col-md-6 d-flex portfolio-item wow fadeInUp"
+      data-wow-delay="0.1s"
+    >
+      <div class="product-img">
+        <img src="{{ i.PRDT_Image.url }}" />
+      </div>
+      <div class="product-info">
+        <div class="product-text mt-5">
+          <p class="display-9 text-primary">{{ i.PRDT_Title }}</p>
+          <p class="">Rs.{{ i.PRDT_price }}</p>
+          <p class="text-muted" style="font-size: 10px">(Incl. all taxes)</p>
+          <p class="text-muted" style="font-size: 13px">
+            Size : {{ i.PRDT_Size }}
+          </p>
+        </div>
+        <div class="product-price-btn">
+          <!-- <p><span>78</span>$</p> -->
+          <a href="{% url 'viewproduct' i.id %}"
+            ><button type="button" class="btn btn-primary prdt-btn">
+              Read More
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+    {% endif %} {% endfor %}
+  </div>
+</div> {% endcomment %}
+
+<!--     -->
+
+{% comment %} <div class="container mt-5" id="home-care">
+  <h3 class="display-5 mb-5 text-primary">Home Care</h3>
+  <br />
+  <div class="row g-4 portfolio-container">
+    {% for i in data %} {% if i.category.ctg_Name == 'Home Care' %}
+    <div
+      class="wrapper1 col-lg-4 col-md-6 d-flex portfolio-item wow fadeInUp"
+      data-wow-delay="0.1s"
+    >
+      <div class="product-img">
+        <img src="{{ i.PRDT_Image.url }}" />
+      </div>
+      <div class="product-info">
+        <div class="product-text mt-5">
+          <p class="display-9 text-primary">{{ i.PRDT_Title }}</p>
+          <p class="">Rs.{{ i.PRDT_price }}</p>
+          <p class="text-muted" style="font-size: 10px">(Incl. all taxes)</p>
+          <p class="text-muted" style="font-size: 13px">
+            Size : {{ i.PRDT_Size }}
+          </p>
+        </div>
+        <div class="product-price-btn">
+          <!-- <p><span>78</span>$</p> -->
+          <a href="{% url 'viewproduct' i.id %}"
+            ><button type="button" class="btn btn-primary prdt-btn">
+              Read More
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+    {% endif %} {% endfor %}
+  </div>
+</div> {% endcomment %}
+
+<!-- Products Card End -->
+
+{% comment %}  {% endcomment %}
+
+<div class="container">
+  <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" >
+    <h1 class="display-5 mb-5 mt-5">Certifications</h1>
+  </div>
+ 
+
+  <div class="row container justify-content-center">
+    <div class="prdt-view wow fadeInUp d-flex justify-content-center">
+        <div class="prdt-crd me-5">
+            <img src="{% static 'img/CERTIFIED3.PNG' %}" class="prdt-circle-bgs rounded-circle" alt="" />
+        </div>
+        <div class="prdt-crd me-5">
+            <img src="{% static 'img/CERTIFIED5.PNG' %}" class="prdt-circle-bgs rounded-circle" alt=""/>
+        </div>
+        <div class="prdt-crd me-5">
+            <img src="{% static 'img/CERTIFIED7.PNG' %}" class="prdt-circle-bgs rounded-circle" alt=""/>
+        </div>
+        <div class="prdt-crd me-5" >
+            <img src="{% static 'img/CERTIFIED6.PNG' %}" class="prdt-circle-bgs rounded-circle" alt=""/>
+        </div>
+        <div class="prdt-crd me-5" >
+          <img src="{% static 'img/CERTIFIED4.PNG' %}" class="prdt-circle-bgs rounded-circle" alt=""/>
+      </div>
+
+
+        <div class="prdt-crd me-5">
+          <img src="{% static 'img/CERTIFIED.PNG' %}" class="prdt-circle-bgs rounded-circle" alt="" />
+      </div>
+      <div class="prdt-crd me-5">
+          <img src="{% static 'img/CERTIFIED1.PNG' %}" class="prdt-circle-bgs rounded-circle" alt=""/>
+      </div>
+      <div class="prdt-crd me-5">
+          <img src="{% static 'img/CERTIFIED2.PNG' %}" class="prdt-circle-bgs rounded-circle" alt=""/>
+      </div>
+
+    </div>
+  </div>  
+
+  {% comment %}  {% endcomment %}
+  {% comment %} <div class="row container justify-content-center">
+    <div class="prdt-view wow fadeInUp d-flex justify-content-center">
+        <div class="prdt-crd me-5">
+            <img src="{% static 'img/iso1.jpg' %}" class="prdt-circle-bgs rounded-circle" alt="" />
+        </div>
+        <div class="prdt-crd me-5">
+            <img src="{% static 'img/iso5.jpg' %}" class="prdt-circle-bgs rounded-circle" alt=""/>
+        </div>
+        <div class="prdt-crd me-5">
+            <img src="{% static 'img/iso4.jpg' %}" class="prdt-circle-bgs rounded-circle" alt=""/>
+        </div>
+        
+    </div>
+  </div> {% endcomment %}
+</div>
+
+{% comment %}  {% endcomment %}
+
+<br />
+
+<!-- Testimonial Start -->
+{% comment %} <div class="container-xxl py-5">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+        <h1 class="display-5 mb-5">What Our Clients Say About Us!</h1>
+      </div>
+      <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.5s">
+        <div class="owl-carousel testimonial-carousel">
+          <a href="{% url 'review' %}">
+            <div class="testimonial-item d-flex">
+              <img
+                class="img-fluid rounded mb-3"
+                src="{% static 'img/ourjourney.png' %}"
+                height="90px"
+                width="120px"
+                style="margin-top: 20px"
+                alt=""
+              />
+              <div style="margin-left: 10px">
+                <h4>Client Name</h4>
+                <span>Doctor</span>
+              </div>
+            </div>
+          </a>
+          <a href="{% url 'review' %}">
+            <div class="testimonial-item d-flex">
+              <img
+                class="img-fluid rounded mb-3"
+                src="{% static 'img/ourjourney.png' %}"
+                height="90px"
+                width="120px"
+                style="margin-top: 20px"
+                alt=""
+              />
+              <div style="margin-left: 10px">
+                <h4>Client Name</h4>
+                <span>S E</span>
+              </div>
+            </div>
+          </a>
+          <a href="{% url 'review' %}">
+            <div class="testimonial-item d-flex">
+              <img
+                class="img-fluid rounded mb-3"
+                src="{% static 'img/ourjourney.png' %}"
+                height="90px"
+                width="120px"
+                style="margin-top: 20px"
+                alt=""
+              />
+              <div style="margin-left: 10px">
+                <h4>Client Name</h4>
+                <span>M D</span>
+              </div>
+            </div>
+          </a>
+          <a href="{% url 'review' %}">
+            <div class="testimonial-item d-flex">
+              <img
+                class="img-fluid rounded mb-3"
+                src="{% static 'img/ourjourney.png' %}"
+                height="90px"
+                width="120px"
+                style="margin-top: 20px"
+                alt=""
+              />
+              <div style="margin-left: 10px">
+                <p class="fs-10">
+                  I had been working with other network marketing companies for
+                  the past 10 years. But despite my constant hard work I didn’t
+                  receive any result for my efforts. I joined Vestige in 2009
+                  and with just 5% of efforts I had put in my previous company,
+                  I was able to achieve great success.
+                </p>
+                <h4>Client Name</h4>
+                <span>C E O</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> {% endcomment %}
+
+
+<!-- Testimonial End -->
+{% endblock %}

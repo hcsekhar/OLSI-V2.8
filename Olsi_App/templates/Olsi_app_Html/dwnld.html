@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  OLSI | Contact Us
+{% endblock %}
+
+{% block content %}
+  <div class="row text-center">
+    <div class="column">
+      <div class="card1" style="margin-top: 20px;">
+        <h1 style="color: darkgreen;">Resources and Downloads</h1>
+
+        <div class="filters">
+          <div class="filter">
+            <input style="width: 500px; border-radius: 20px; height: 40px; padding: 10px; border-width: 0.4px;" type="text" name="search here" placeholder="search here" /><i class="fa-solid fa-magnifying-glass" style="margin: right 400px;right: 20px;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br /><br />
+  <div class="container-fluid d-flex"> 
+    <div style="width:20%; padding: 10px; margin-top: -5px; height: 70%; border-radius: 10px;" class="w3-sidebar w3-bar-block bg-light w3-card">
+      <h3>FILTER</h3>
+      <hr />
+      <h5>Brands</h5>
+      <ul style="list-style: none;">
+        <li>
+          <a href="#" class="w3-bar-item w3-button">
+            <i class="bi bi-arrow-right-circle-fill"></i>
+            <span style="margin-left: 5px;">Wellness</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="#" class="w3-bar-item w3-button btn-link">
+            <i class="bi bi-arrow-right-circle-fill"></i>
+            <span style="margin-left: 5px;">Preference</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="w3-bar-item w3-button btn-link">
+            <i class="bi bi-arrow-right-circle-fill"></i>
+            <span style="margin-left: 5px;">White House</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="w3-bar-item w3-button btn-link">
+            <i class="bi bi-arrow-right-circle-fill"></i>
+            <span style="margin-left: 5px;">Agrein</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <h5>File Type</h5>
+      <hr />
+      <ul style="list-style: none;">
+        <li>
+          <a href="#" class="w3-bar-item w3-button">
+            <i class="bi bi-arrow-right-circle-fill"></i>
+            <span style="margin-left: 5px;">videos</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="w3-bar-item w3-button">
+            <i class="bi bi-arrow-right-circle-fill"></i>
+            <span style="margin-left: 5px;">PDFs</span>
+          </a>
+        </li>
+      </ul>
+      
+      <hr />
+    </div>
+
+    <div class="album bg-body-tertiary" style="margin-left: 20px;">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col" style="width: 200px;">
+            <div class="card" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;">
+              <img src="{% static "img/Product_Img/shampoo.png" %}" />
+              
+              <div class="card-body">
+                <p style="padding: 5px;">
+                  Shampoo
+                  <i class="bi bi-filetype-pdf" style="color: blue; margin-left: 10px;"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col" style="width: 200px;">
+            <div class="card" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;">
+              <img src="{% static "img/Product_Img/hi_yield.png" %}" />
+              
+              <div class="card-body">
+                <p style="padding: 5px;">
+                  High Yield
+                  <i class="bi bi-filetype-pdf" style="color: blue; margin-left: 10px;"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col" style="width: 200px;">
+            <div class="card" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;">
+              <img src="{% static "img/Product_Img/Ojas.png" %}" />
+              
+              <div class="card-body">
+                <p style="padding: 5px;">
+                  Ojas Activ
+                  <i class="bi bi-filetype-pdf" style="color: blue; margin-left: 10px;"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="width: 200px;">
+            <div class="card" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;">
+              <img src="{% static "img/Product_Img/DESHWASH.png" %}" />
+              
+              <div class="card-body">
+                <p style="padding: 5px;">
+                  Clean Drops
+                  <i class="bi bi-filetype-pdf" style="color: blue; margin-left: 10px;"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

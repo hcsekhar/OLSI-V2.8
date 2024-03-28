@@ -1,0 +1,241 @@
+{% load static %}
+
+<style>
+  .search-container input[type='text'] {
+    width: 160px;
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  .search-container button {
+    float: right;
+    padding: 11px 10px;
+    margin-top: 6px;
+  
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  .search-container button:hover {
+    background: #ccc;
+  }
+</style>
+
+<!-- Topbar Start -->
+<div class="container-fluid bg-dark text-light px-0 py-1">
+  <div class="row gx-0 d-none d-lg-flex">
+    <div class="col-lg-7 px-5 text-start">
+      <div class="h-100 d-inline-flex align-items-center">
+        <a href="#" class="text-light"></a>
+      </div>
+      <div class="h-100 d-inline-flex align-items-center me-4">
+        <a href="{% url 'dwnld' %}" class="text-light">Downloads</a>
+      </div>
+      <div class="h-100 d-inline-flex align-items-center">
+        <a href="{% url 'aboutus' %}" class="text-light me-4">About OLSI</a>
+      </div>
+      {% comment %} <div class="h-100 d-inline-flex align-items-center">
+        <a href="{% url 'business' %}" class="text-light">Start a Business</a>
+      </div> {% endcomment %}
+    </div>
+    <div class="col-lg-5 px-5 text-end">
+      <div class="h-100 d-inline-flex align-items-center mx-n2">
+        <span></span>
+        <a href="{% url 'contact' %}" class="text-light" style="margin-right: 10px;">Contact Us</a>
+        <button type="button" class="btn btn-primary btnLogin-popup">Sign In</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Topbar End -->
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 border-bottom">
+  <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+    <img src="{% static 'img/logo_olsi1.png' %}" class="" alt="" style="height: 80px; width: 140px; padding: 10px 0;  " />
+  </a>
+  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="navbar-nav ms-auto p-4 p-lg-0">
+      <header class="header">
+        <div class="container">
+          <div class="row">
+            <!-- menu start here -->
+            <div class="">
+              <nav class="menu">
+                <ul class="menu-main">
+                  <li class="menu-item-has-children">
+                    <a href="/products/0">PRODUCTS <i class="fa fa-angle-down"></i></a>
+                    <div class="sub-menu mega-menu mega-menu-column-4">
+                      <div class="list-item" style="display: flex;">
+                      {% for categorys in category %}
+                        <div class="nav" style="width: 300px; height: 45%; display:list-item;">
+                          <h4 class="" style="margin-right: 150px;">{{categorys.ctg_Name}}</h4>
+                        <ul style="text-decoration: none; list-style: none; ">
+                          {% for product in categorys.product_db_set.all %}
+                          <li>
+                            <a href="{% url "viewproduct" product.id %}">{{product.PRDT_Title}}</a>
+                          </li>
+                          {% endfor %}
+                        </ul>
+                        </div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a style="text-decoration: none;" href="#">BRANDS <i class="fa fa-angle-down"></i></a>
+                    <div class="sub-menu single-column-menu">
+                      <ul style="text-decoration: none; list-style-type: none;" class="d-flex sub-menu mega-menu">
+
+                        <li style="padding: 10px;">
+                          <a href="{% url 'home' %}#health-care">
+                            <img src="{% static 'img/Wellness-Logo.png' %}" style="height: 60px; width: 60px;" alt="" />
+                          </a>
+                        </li>
+
+                        <li style="padding: 10px;">
+                          <a href="{% url 'home' %}#person-care">
+                            <img src="{% static 'img/prefference.png' %}" style="height: 50px; width: 200px; margin-top: 8px; " alt="" />
+                          </a>
+                        </li>
+
+                        
+                        <li style="padding: 10px;">
+                          <a href="{% url 'home' %}#home-care">
+                            <img src="{% static 'img/WhiteHouseLogo.png' %}" style="height: 50px; width: 160px;" alt="" />
+                          </a>
+                        </li>
+
+                        <li style="padding: 10px;">
+                          <a href="{% url 'home' %}#agriculture">
+                            <img src="{% static 'img/AgrienLog.png' %}" style="height: 50px; width: 170px;" alt="" />
+                          </a>
+                        </li>
+
+                        {% comment %} <li style="padding: 10px;">
+                          <a href="{% url 'home' %}#person-care">
+                            <img src="{% static 'img/prefference.png' %}" style="height: 50px; width: 200px; margin-top: 8px; " alt="" />
+                          </a>
+                        </li> {% endcomment %}
+                        
+                        {% comment %} <li style="padding: 10px;">
+                          <a href="{% url 'home' %}#home-care">
+                            <img src="{% static 'img/WhiteHouseLogo.png' %}" style="height: 50px; width: 130px;" alt="" />
+                          </a>
+                        </li> {% endcomment %}
+                      </ul>
+                    </div>
+                  </li>
+                  {% comment %} <li>
+                    <a style="text-decoration: none;" href="{% url 'branches' %}">BRANCHES</a>
+                  </li> {% endcomment %}
+                  <li class="menu-item-has-children">
+                    <a style="text-decoration: none;" href="#">BRANCHES <i class="fa fa-angle-down"></i></a>
+                    <div class="sub-menu single-column-menu">
+                      <ul style="text-decoration: none; list-style-type: none;" class="d-flex sub-menu mega-menus">
+                        <li style="">
+                          <div class="search-container">
+                            <form action="{% url 'branches' %}" method="GET">
+                              <input type="text" placeholder="Search.." name="search" id="search" />
+                              <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a style="text-decoration: none;" href="{% url 'offers' %}">OFFERS</a>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a style="text-decoration: none;" href="{% url 'upcoming' %}">UPCOMING LAUNCHES</a>  
+                  </li>
+                  <li>
+                    <a style="text-decoration: none;" href="{% url 'gallery' %}">EVENTS</a>
+                  </li>
+
+                  <li>
+                    <a style="text-decoration: none;" href="{% url 'trainer' %}">TRAININGS</a>
+                  </li>
+
+                  <li>
+                    <a style="text-decoration: none;" href="{% url 'career' %}">CAREER</a>
+                  </li>
+                  
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    
+  </div>
+</nav>
+<!-- Navbar End -->
+
+<!-- Login and Registration -->
+
+<div class="cover_box">
+  <span class="icon-close"><ion-icon name="close-outline" style="color: aliceblue;"></ion-icon></span>
+  <div class="form-box login">
+    <h2>Login</h2>
+    <form action="#">
+      <div class="input-box">
+        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+        <input type="email" required />
+        <label>Email</label>
+      </div>
+      <div class="input-box">
+        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+        <input type="password" required />
+        <label>Password</label>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox" />Remmber me</label>
+        <a href="#">Forgot password?</a>
+      </div>
+      <button type="submit" class="btn12">Login</button>
+      <div class="login-register">
+        <p>
+          Don't have an account? <a href="{% url "register" %}" class="register-link">Register</a>
+        </p>
+      </div>
+    </form>
+  </div>
+  <!-- registration -->
+  <div id="reg" class="form-box register">
+    <h2>Register</h2>
+    <form action="#">
+      <div class="input-box">
+        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+        <input type="text" required />
+        <label>Username</label>
+      </div>
+      <div class="input-box">
+        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+        <input type="email" required />
+        <label>Email</label>
+      </div>
+      <div class="input-box">
+        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+        <input type="password" required />
+        <label>Password</label>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox" />Agree to terms & conditions</label>
+        <a href="#">Forgot password?</a>
+      </div>
+      <button type="submit" class="btn12">Register</button>
+      <div class="login-register">
+        <p>
+          Already have an account? <a href="#" class="login-link">Sign In</a>
+        </p>
+      </div>
+    </form>
+  </div> 
+</div>

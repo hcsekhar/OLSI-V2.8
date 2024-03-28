@@ -1,0 +1,319 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block title %} 
+OLSI | About Us
+{%endblock %} 
+{% block content %}
+
+<style>
+  @media only screen and (max-width: 480px) {
+    .gid-container {
+      height: 1000vh;
+    }
+  }
+</style>  
+
+
+<div class="gid-container" style="height: 430vh">
+  <!-- Sidebar -->
+  <div class="sidebar12 position-sticky" style="z-index: 1">
+    <div class="contents-container">
+      <div style="display: flex; flex-direction: row">
+        <main class="d-flex flex-nowrap">
+          <div class="list-group list-group-flush border-bottom scrollarea">
+            <a
+              href="#"
+              class="list-group-item list-group-item-action active py-3 lh-sm"
+              aria-current="true"
+            >
+              <div
+                class="d-flex w-100 align-items-center justify-content-between"
+              >
+                <strong class="mb-1">About OLSI</strong>
+              </div>
+            </a>
+
+            <a
+              href="{% url 'business' %}"
+              class="list-group-item list-group-item-action py-3 lh-sm"
+            >
+              <div
+                class="d-flex w-100 align-items-center justify-content-between"
+              >
+                <strong class="mb-1">How OLSI Business Works</strong>
+              </div>
+            </a>
+            {% comment %} <a
+              href="#"
+              class="list-group-item list-group-item-action py-3 lh-sm"
+            >
+              <div
+                class="d-flex w-100 align-items-center justify-content-between"
+              >
+                <strong class="mb-1">Our Journey</strong>
+              </div>
+            </a> {% endcomment %}
+            <a
+              href="{% url 'manufacture' %}"
+              class="list-group-item list-group-item-action py-3 lh-sm"
+              aria-current="true"
+            >
+              <div
+                class="d-flex w-100 align-items-center justify-content-between"
+              >
+                <strong class="mb-1">Manufacturing</strong>
+              </div>
+            </a>
+            <a
+              href="{% url 'agriculture' %}"
+              class="list-group-item list-group-item-action py-3 lh-sm"
+            >
+              <div
+                class="d-flex w-100 align-items-center justify-content-between"
+              >
+                <strong class="mb-1"> Agriculture</strong>
+              </div>
+            </a>
+            <a
+              href="{% url 'career' %}"
+              class="list-group-item list-group-item-action py-3 lh-sm"
+            >
+              <div
+                class="d-flex w-100 align-items-center justify-content-between"
+              >
+                <strong class="mb-1">Career</strong>
+              </div>
+            </a>
+            <a
+              href="{% url 'faq' %}"
+              class="list-group-item list-group-item-action py-3 lh-sm"
+              aria-current="true"
+            >
+              <div
+                class="d-flex w-100 align-items-center justify-content-between"
+              >
+                <strong class="mb-1">FAQ's</strong>
+              </div>
+            </a>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Page -->
+  <div class="main-page">
+    <main class="container">
+      <div
+        class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-light bg-gradient"
+      >
+        <div class="col-lg-6 px-0">
+          <h1 class="display-5">About OLSI</h1>
+        </div>
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="height:88%" >
+            <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="mb-0" style="color: darkgreen">Our Vision</h3>
+              <br />
+              <p class="card-text mb-auto">
+                To help people live a healthy and life of economical freedom on
+                their own way.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="height:88%">
+            <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="mb-0" style="color: darkgreen">Our Mission</h3>
+              <br />
+              <p class="mb-auto">
+                To create a revolution and become peoples first choice in the industry in the coming years.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-gradient">
+        <div class="col-lg-12 px-0">
+          <h1
+            style="color: darkgreen; opacity: 1px; font-size: 45px"
+            class="display-4"
+          >
+            Management Words
+          </h1>
+          <p class="lead my-3" style="text-align: justify">
+            Discover OLSI, your gateway to a realm of well-being,
+            entrepreneurial growth, and thriving communities. Based in
+            Hyderabad, Driven by a resolute spirit, we are dedicated to
+            elevating lives. Our dedicated team is committed to connecting you
+            with top-tier solutions in health, wellness, fitness, and beauty.
+            Whether you're nurturing your entrepreneurial ambitions or seeking
+            wellness excellence, OLSI is your unwavering partner on this
+            transformative journey.
+          </p>
+        </div>
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="height:90.5%">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary-emphasis"
+                >Discover OLSI</strong
+              >
+              <h3 class="mb-0 display-6" style="color: darkgreen">
+                Your Path to Wellness and Entrepreneurship
+              </h3>
+              <br />
+              <p class="card-text mb-auto" style="text-align: justify">
+                Discover OLSI, your gateway to a realm of well-being,
+                entrepreneurial growth, and thriving communities. Based in
+                Hyderabad, Driven by a resolute spirit, we are dedicated to
+                elevating lives. Our dedicated team is committed to connecting
+                you with top-tier solutions in health, wellness, fitness, and
+                beauty. Whether you're nurturing your entrepreneurial ambitions
+                or seeking wellness excellence, OLSI is your unwavering partner
+                on this transformative journey.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-5 shadow-sm h-md-250 position-relative" style="height:90.5%">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success-emphasis"
+                >Our Story</strong
+              >
+              <h3 class="mb-0 display-6" style="color: darkgreen">
+                Years of Experience, Trust, and Global Aspirations
+              </h3>
+              <br />
+              <p class="mb-auto" style="text-align: justify">
+                Embarking on a journey enriched by over four decades of
+                collective industry experience, OLSI finds its inception in the
+                vibrant city of Hyderabad. With a profound vision, that
+                intertwines wellness and entrepreneurship, our path is
+                illuminated by the promise of elevating lives. At OLSI, we stand
+                as a beacon of empowerment and transformation. Our story is one
+                of growth, trust, and a relentless pursuit of excellence. Our
+                story is one of growth, trust, and a relentless pursuit of
+                excellence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-lg-12">
+          <article class="blog-post">
+            <h2
+              style="color: darkgreen; opacity: 1px; font-size: 35px"
+              class="display-5 link-body-emphasis mb-1"
+            >
+              Our Strength
+            </h2>
+            <p>
+              Embracing our entrepreneurial origins, rooted in innovation and
+              ambition, OLSI derives its power from nurturing the spark of
+              entrepreneurship. The entrepreneurial ethos runs deep within us.
+              Despite being in the early stages of our journey, we're propelled
+              by a vast global network. This network comprises numerous OLSI
+              Partners, with a significant portion hailing from India. Among
+              them, A noteworthy segment is constituted by outstanding women,
+              exemplifying excellence.
+            </p>
+            <br />
+            <p>
+              In the awareness that cultivating an ecosystem is vital, OLSI
+              offers a fertile ground for partners to establish and manage
+              businesses that resonate with their passions. Whether it's the
+              realm of fitness, well-being, or beauty, OLSI acts as the conduit
+              for transforming aspirations into thriving endeavour's.
+            </p>
+            <h2 style="color: darkgreen; opacity: 1px">
+              OLSI Entrepreneurship Program: Cultivating Leadership Excellence
+            </h2>
+            <p>
+              In a rapidly evolving global business landscape, leadership
+              development has emerged as a cornerstone of sustained success.
+              OLSI is dedicated to nurturing the skills of both its workforce
+              and esteemed OLSI Partners. With this commitment in mind, OLSI
+              proudly joins hands with a distinguished institutions to launch a
+              customized Entrepreneurship Program.
+            </p>
+        
+              <p>
+                The Entrepreneurship Program stands as a testament to our
+                commitment to empowering OLSI Partner Leaders with contemporary
+                leadership and business insights. This custom-designed program
+                draws from real-world case studies, ensuring immersive and
+                impactful learning experiences. The program's on-campus modules
+                further elevate the journey, highlighting the vital role of
+                leadership development in today's dynamic business environment.
+              </p>
+            
+            <hr />
+
+            <h2 style="color: darkgreen; padding-left: 250px">Our Journey</h2>
+            <p>
+              <img src="{% static 'img/ourjourney.png' %}" style="height: 300px; width: 500px; padding-left: 200px" />
+            </p>
+            <h2 style="color: darkgreen">Embarking on a New Path</h2>
+            <p>
+              Our journey is in its initial strides, yet the vision is clear and
+              the determination unwavering. We've set forth to create an impact,
+              one step at a time. With passion as our compass, we're venturing
+              into uncharted territories, guided by the belief that every small
+              beginning has the potential to bloom into something extraordinary.
+              Join us as we navigate this nascent journey, hand in hand, towards
+              a future enriched with possibilities.
+            </p>
+
+            <p></p>
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Upvotes</th>
+                  <th>Downvotes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Alice</td>
+                  <td>10</td>
+                  <td>11</td>
+                </tr>
+                <tr>
+                  <td>Bob</td>
+                  <td>4</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>Charlie</td>
+                  <td>7</td>
+                  <td>9</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Totals</td>
+                  <td>21</td>
+                  <td>23</td>
+                </tr>
+              </tfoot>
+            </table>
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+{% endblock %}
